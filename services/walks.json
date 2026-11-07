@@ -1,0 +1,72 @@
+{
+  "service": "walk-service",
+  "note": "Look up by booking_gid to get the walk_gid. GPS sessions and logs are keyed by walk_gid.",
+  "walks": [
+    {
+      "walk_gid": "wlk_7f20c1",
+      "booking_gid": "bkg_41a07e",
+      "walker_id": "wkr_ana",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7f9e44",
+      "booking_gid": "bkg_41c3d9",
+      "walker_id": "wkr_ana",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7f5b03",
+      "booking_gid": "bkg_3f88a2",
+      "walker_id": "wkr_jon",
+      "status": "cancelled_weather"
+    },
+    {
+      "walk_gid": "wlk_80c2a7",
+      "booking_gid": "bkg_3fa4c0",
+      "walker_id": "wkr_jon",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7e81f9",
+      "booking_gid": "bkg_40e61b",
+      "walker_id": "wkr_mei",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7f8d6b",
+      "booking_gid": "bkg_4129f4",
+      "walker_id": "wkr_mei",
+      "status": "incomplete_refunded"
+    },
+    {
+      "walk_gid": "wlk_7f11e2",
+      "booking_gid": "bkg_3e91d7",
+      "walker_id": "wkr_jon",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7f4c88",
+      "booking_gid": "bkg_4011aa",
+      "walker_id": "wkr_ana",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7fb230",
+      "booking_gid": "bkg_40f2c8",
+      "walker_id": "wkr_mei",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_7f9a10",
+      "booking_gid": "bkg_41d702",
+      "walker_id": "wkr_jon",
+      "status": "completed"
+    },
+    {
+      "walk_gid": "wlk_80a5d6",
+      "booking_gid": "bkg_4233ee",
+      "walker_id": "wkr_ana",
+      "status": "completed"
+    }
+  ]
+}

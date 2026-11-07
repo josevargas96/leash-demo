@@ -1,0 +1,275 @@
+{
+  "tool": "walk-tracker (GPS session replay)",
+  "note": "Sessions are keyed by walk_gid. You will not find them by owner or dog name.",
+  "sessions": [
+    {
+      "walk_gid": "wlk_7e81f9",
+      "session_id": "gps_7e81f9",
+      "started_at": "2026-11-01T09:00:00-07:00",
+      "ended_at": "2026-11-01T09:30:00-07:00",
+      "duration_min": 30,
+      "distance_mi": 1.0,
+      "events": [
+        {
+          "ts": "2026-11-01T09:00:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-01T09:30:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f11e2",
+      "session_id": "gps_7f11e2",
+      "started_at": "2026-11-02T11:31:00-07:00",
+      "ended_at": "2026-11-02T12:02:00-07:00",
+      "duration_min": 31,
+      "distance_mi": 1.4,
+      "events": [
+        {
+          "ts": "2026-11-02T11:31:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-02T12:02:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f20c1",
+      "session_id": "gps_7f20c1",
+      "started_at": "2026-11-02T14:01:00-07:00",
+      "ended_at": "2026-11-02T14:32:00-07:00",
+      "duration_min": 31,
+      "distance_mi": 1.1,
+      "events": [
+        {
+          "ts": "2026-11-02T14:01:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-02T14:32:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f4c88",
+      "session_id": "gps_7f4c88",
+      "started_at": "2026-11-03T10:01:00-07:00",
+      "ended_at": "2026-11-03T10:31:00-07:00",
+      "duration_min": 30,
+      "distance_mi": 0.9,
+      "events": [
+        {
+          "ts": "2026-11-03T10:01:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-03T10:31:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f5b03",
+      "session_id": "gps_7f5b03",
+      "started_at": "2026-11-03T15:01:00-07:00",
+      "ended_at": "2026-11-03T15:10:00-07:00",
+      "duration_min": 9,
+      "distance_mi": 0.4,
+      "events": [
+        {
+          "ts": "2026-11-03T15:01:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-03T15:06:00-07:00",
+          "event": "gps_ping",
+          "lat": 39.7391,
+          "lng": -104.959
+        },
+        {
+          "ts": "2026-11-03T15:09:00-07:00",
+          "event": "weather_alert",
+          "type": "lightning",
+          "source": "weather-service"
+        },
+        {
+          "ts": "2026-11-03T15:10:00-07:00",
+          "event": "walk_cancelled",
+          "reason": "weather_auto_cancel"
+        },
+        {
+          "ts": "2026-11-03T15:18:00-07:00",
+          "event": "dog_returned_home"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f8d6b",
+      "session_id": "gps_7f8d6b",
+      "started_at": "2026-11-04T09:00:00-07:00",
+      "ended_at": "2026-11-04T09:41:00-07:00",
+      "duration_min": 41,
+      "distance_mi": 0.3,
+      "events": [
+        {
+          "ts": "2026-11-04T09:00:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-04T09:04:00-07:00",
+          "event": "gps_ping",
+          "lat": 39.6812,
+          "lng": -104.9601
+        },
+        {
+          "ts": "2026-11-04T09:08:00-07:00",
+          "event": "gps_signal_lost",
+          "note": "last fix near Cherry Creek Trail underpass"
+        },
+        {
+          "ts": "2026-11-04T09:22:00-07:00",
+          "event": "photo_uploaded",
+          "file": "waffles_creek.jpg",
+          "note": "photo has no location, GPS unavailable"
+        },
+        {
+          "ts": "2026-11-04T09:34:00-07:00",
+          "event": "gps_signal_restored",
+          "note": "first fix 1.1 mi from last known point"
+        },
+        {
+          "ts": "2026-11-04T09:38:00-07:00",
+          "event": "gps_ping",
+          "lat": 39.679,
+          "lng": -104.9624
+        },
+        {
+          "ts": "2026-11-04T09:41:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f9a10",
+      "session_id": "gps_7f9a10",
+      "started_at": "2026-11-04T12:02:00-07:00",
+      "ended_at": "2026-11-04T12:33:00-07:00",
+      "duration_min": 31,
+      "distance_mi": 1.1,
+      "events": [
+        {
+          "ts": "2026-11-04T12:02:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-04T12:33:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7f9e44",
+      "session_id": "gps_7f9e44",
+      "started_at": "2026-11-04T14:02:00-07:00",
+      "ended_at": "2026-11-04T14:33:00-07:00",
+      "duration_min": 31,
+      "distance_mi": 1.2,
+      "events": [
+        {
+          "ts": "2026-11-04T13:58:00-07:00",
+          "event": "walker_arrived",
+          "note": "geofence: at owner address"
+        },
+        {
+          "ts": "2026-11-04T14:02:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-04T14:10:00-07:00",
+          "event": "gps_ping",
+          "lat": 39.7612,
+          "lng": -104.9811
+        },
+        {
+          "ts": "2026-11-04T14:18:00-07:00",
+          "event": "photo_uploaded",
+          "file": "biscuit_park.jpg"
+        },
+        {
+          "ts": "2026-11-04T14:25:00-07:00",
+          "event": "gps_ping",
+          "lat": 39.7655,
+          "lng": -104.9779
+        },
+        {
+          "ts": "2026-11-04T14:33:00-07:00",
+          "event": "walk_ended"
+        },
+        {
+          "ts": "2026-11-04T14:34:00-07:00",
+          "event": "walker_departed"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_7fb230",
+      "session_id": "gps_7fb230",
+      "started_at": "2026-11-04T16:00:00-07:00",
+      "ended_at": "2026-11-04T16:32:00-07:00",
+      "duration_min": 32,
+      "distance_mi": 1.2,
+      "events": [
+        {
+          "ts": "2026-11-04T16:00:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-04T16:32:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_80a5d6",
+      "session_id": "gps_80a5d6",
+      "started_at": "2026-11-05T08:31:00-07:00",
+      "ended_at": "2026-11-05T09:01:00-07:00",
+      "duration_min": 30,
+      "distance_mi": 1.0,
+      "events": [
+        {
+          "ts": "2026-11-05T08:31:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-05T09:01:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    },
+    {
+      "walk_gid": "wlk_80c2a7",
+      "session_id": "gps_80c2a7",
+      "started_at": "2026-11-05T15:00:00-07:00",
+      "ended_at": "2026-11-05T15:31:00-07:00",
+      "duration_min": 31,
+      "distance_mi": 1.3,
+      "events": [
+        {
+          "ts": "2026-11-05T15:00:00-07:00",
+          "event": "walk_started"
+        },
+        {
+          "ts": "2026-11-05T15:31:00-07:00",
+          "event": "walk_ended"
+        }
+      ]
+    }
+  ]
+}

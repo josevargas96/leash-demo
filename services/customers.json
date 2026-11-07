@@ -1,0 +1,62 @@
+{
+  "service": "customer-service",
+  "note": "Look up by customer_id (the ID in the CRM link). Everything downstream is keyed by account_gid, not by name.",
+  "customers": [
+    {
+      "customer_id": "CUS-48213",
+      "owner_name": "Dana Whitfield",
+      "dog_name": "Biscuit",
+      "account_gid": "acct_9c41e27f",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-51077",
+      "owner_name": "Sam Okafor",
+      "dog_name": "Bruno",
+      "account_gid": "acct_3b7d9021",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-50392",
+      "owner_name": "Priya Raman",
+      "dog_name": "Waffles",
+      "account_gid": "acct_e18a44c6",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-47720",
+      "owner_name": "Leo Martinez",
+      "dog_name": "Pepper",
+      "account_gid": "acct_51f0bb38",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-49105",
+      "owner_name": "Hannah Cole",
+      "dog_name": "Moose",
+      "account_gid": "acct_a2c9e713",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-52260",
+      "owner_name": "Marcus Bell",
+      "dog_name": "Juniper",
+      "account_gid": "acct_7d33f0a9",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-48870",
+      "owner_name": "Aiko Tanaka",
+      "dog_name": "Noodle",
+      "account_gid": "acct_c04e5b12",
+      "city": "Denver"
+    },
+    {
+      "customer_id": "CUS-50014",
+      "owner_name": "Grace Holt",
+      "dog_name": "Ranger",
+      "account_gid": "acct_6e9a2d55",
+      "city": "Denver"
+    }
+  ]
+}

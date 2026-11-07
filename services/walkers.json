@@ -1,0 +1,23 @@
+{
+  "service": "walker-service",
+  "walkers": [
+    {
+      "walker_id": "wkr_ana",
+      "name": "Ana R.",
+      "rating": 4.9,
+      "payout_per_walk_usd": 18.0
+    },
+    {
+      "walker_id": "wkr_jon",
+      "name": "Jon P.",
+      "rating": 4.8,
+      "payout_per_walk_usd": 18.0
+    },
+    {
+      "walker_id": "wkr_mei",
+      "name": "Mei L.",
+      "rating": 5.0,
+      "payout_per_walk_usd": 18.0
+    }
+  ]
+}

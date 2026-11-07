@@ -1,0 +1,114 @@
+{
+  "service": "booking-service",
+  "note": "Look up by account_gid. One customer can have many bookings; use the date in the ticket to pick the right one.",
+  "bookings": [
+    {
+      "booking_gid": "bkg_41a07e",
+      "account_gid": "acct_9c41e27f",
+      "walker_id": "wkr_ana",
+      "scheduled_start": "2026-11-02T14:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_41c3d9",
+      "account_gid": "acct_9c41e27f",
+      "walker_id": "wkr_ana",
+      "scheduled_start": "2026-11-04T14:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_420b15",
+      "account_gid": "acct_9c41e27f",
+      "walker_id": "wkr_ana",
+      "scheduled_start": "2026-11-06T14:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "scheduled"
+    },
+    {
+      "booking_gid": "bkg_3f88a2",
+      "account_gid": "acct_3b7d9021",
+      "walker_id": "wkr_jon",
+      "scheduled_start": "2026-11-03T15:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "refunded"
+    },
+    {
+      "booking_gid": "bkg_3fa4c0",
+      "account_gid": "acct_3b7d9021",
+      "walker_id": "wkr_jon",
+      "scheduled_start": "2026-11-05T15:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_40e61b",
+      "account_gid": "acct_e18a44c6",
+      "walker_id": "wkr_mei",
+      "scheduled_start": "2026-11-01T09:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_4129f4",
+      "account_gid": "acct_e18a44c6",
+      "walker_id": "wkr_mei",
+      "scheduled_start": "2026-11-04T09:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "refunded"
+    },
+    {
+      "booking_gid": "bkg_3e91d7",
+      "account_gid": "acct_51f0bb38",
+      "walker_id": "wkr_jon",
+      "scheduled_start": "2026-11-02T11:30:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_4011aa",
+      "account_gid": "acct_a2c9e713",
+      "walker_id": "wkr_ana",
+      "scheduled_start": "2026-11-03T10:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_40f2c8",
+      "account_gid": "acct_7d33f0a9",
+      "walker_id": "wkr_mei",
+      "scheduled_start": "2026-11-04T16:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_41d702",
+      "account_gid": "acct_c04e5b12",
+      "walker_id": "wkr_jon",
+      "scheduled_start": "2026-11-04T12:00:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    },
+    {
+      "booking_gid": "bkg_4233ee",
+      "account_gid": "acct_6e9a2d55",
+      "walker_id": "wkr_ana",
+      "scheduled_start": "2026-11-05T08:30:00-07:00",
+      "duration_min": 30,
+      "price_usd": 25.0,
+      "status": "completed"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{"ts": "2026-11-01T09:30:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7e81f9a", "walk_gid": "wlk_7e81f9"}
+{"ts": "2026-11-01T09:30:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7e81f9a", "walk_gid": "wlk_7e81f9", "amount_usd": 25.0}
+{"ts": "2026-11-01T09:30:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7e81f9a", "walk_gid": "wlk_7e81f9", "provider_status": 200}
+{"ts": "2026-11-02T12:02:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7f11e2a", "walk_gid": "wlk_7f11e2"}
+{"ts": "2026-11-02T12:02:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7f11e2a", "walk_gid": "wlk_7f11e2", "amount_usd": 25.0}
+{"ts": "2026-11-02T12:02:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7f11e2a", "walk_gid": "wlk_7f11e2", "provider_status": 200}
+{"ts": "2026-11-02T14:32:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7f20c1a", "walk_gid": "wlk_7f20c1"}
+{"ts": "2026-11-02T14:32:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7f20c1a", "walk_gid": "wlk_7f20c1", "amount_usd": 25.0}
+{"ts": "2026-11-02T14:32:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7f20c1a", "walk_gid": "wlk_7f20c1", "provider_status": 200}
+{"ts": "2026-11-03T10:31:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7f4c88a", "walk_gid": "wlk_7f4c88"}
+{"ts": "2026-11-03T10:31:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7f4c88a", "walk_gid": "wlk_7f4c88", "amount_usd": 25.0}
+{"ts": "2026-11-03T10:31:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7f4c88a", "walk_gid": "wlk_7f4c88", "provider_status": 200}
+{"ts": "2026-11-03T15:01:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_started", "trace_id": "tr_7f5b03c", "walk_gid": "wlk_7f5b03", "provider_status": 200}
+{"ts": "2026-11-03T15:09:00-07:00", "service": "weather-service", "level": "WARN", "message": "lightning alert active for zone DEN-CENTRAL", "trace_id": "tr_7f5b03c"}
+{"ts": "2026-11-03T15:10:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk auto-cancelled: weather_auto_cancel", "trace_id": "tr_7f5b03c", "walk_gid": "wlk_7f5b03"}
+{"ts": "2026-11-03T15:10:00-07:00", "service": "payment-service", "level": "INFO", "message": "refund issued; settles in 3-5 business days", "trace_id": "tr_7f5b03c", "walk_gid": "wlk_7f5b03", "amount_usd": 25.0, "refund_id": "rf_88213"}
+{"ts": "2026-11-03T15:10:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_cancelled_weather", "trace_id": "tr_7f5b03c", "walk_gid": "wlk_7f5b03", "provider_status": 200}
+{"ts": "2026-11-04T09:00:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_started", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b", "provider_status": 200}
+{"ts": "2026-11-04T09:08:00-07:00", "service": "walk-tracker", "level": "WARN", "message": "gps signal lost", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b"}
+{"ts": "2026-11-04T09:34:00-07:00", "service": "walk-tracker", "level": "INFO", "message": "gps signal restored; gap_minutes=26", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b"}
+{"ts": "2026-11-04T09:41:00-07:00", "service": "walk-service", "level": "WARN", "message": "walk evaluated as incomplete: distance_mi=0.3 below MIN_DISTANCE_MI=0.5 (duration_min=41, gps_gap_minutes=26)", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b"}
+{"ts": "2026-11-04T09:41:00-07:00", "service": "payment-service", "level": "INFO", "message": "refund issued for incomplete walk", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b", "amount_usd": 25.0, "refund_id": "rf_88240"}
+{"ts": "2026-11-04T09:41:00-07:00", "service": "payout-service", "level": "INFO", "message": "walker payout skipped: walk incomplete", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b", "walker_id": "wkr_mei", "payout_usd": 0.0}
+{"ts": "2026-11-04T09:41:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_incomplete_refunded", "trace_id": "tr_7f8d6b1", "walk_gid": "wlk_7f8d6b", "provider_status": 200}
+{"ts": "2026-11-04T12:33:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7f9a10a", "walk_gid": "wlk_7f9a10"}
+{"ts": "2026-11-04T12:33:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7f9a10a", "walk_gid": "wlk_7f9a10", "amount_usd": 25.0}
+{"ts": "2026-11-04T12:33:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7f9a10a", "walk_gid": "wlk_7f9a10", "provider_status": 200}
+{"ts": "2026-11-04T14:02:00-07:00", "service": "notification-service", "level": "ERROR", "message": "push failed: walk_started (provider timeout); retries exhausted (MAX_RETRIES=0)", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44", "provider_status": 503}
+{"ts": "2026-11-04T14:18:00-07:00", "service": "notification-service", "level": "ERROR", "message": "push failed: photo_ready (provider timeout); retries exhausted (MAX_RETRIES=0)", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44", "provider_status": 503}
+{"ts": "2026-11-04T14:33:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44"}
+{"ts": "2026-11-04T14:33:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44", "amount_usd": 25.0}
+{"ts": "2026-11-04T14:33:00-07:00", "service": "notification-service", "level": "ERROR", "message": "push failed: walk_ended (provider timeout); retries exhausted (MAX_RETRIES=0)", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44", "provider_status": 503}
+{"ts": "2026-11-04T14:34:00-07:00", "service": "notification-service", "level": "INFO", "message": "email receipt sent", "trace_id": "tr_7f9e44d", "walk_gid": "wlk_7f9e44"}
+{"ts": "2026-11-04T16:32:00-07:00", "service": "walk-service", "level": "INFO", "message": "walk evaluated as completed", "trace_id": "tr_7fb230a", "walk_gid": "wlk_7fb230"}
+{"ts": "2026-11-04T16:32:00-07:00", "service": "payment-service", "level": "INFO", "message": "charge succeeded", "trace_id": "tr_7fb230a", "walk_gid": "wlk_7fb230", "amount_usd": 25.0}
+{"ts": "2026-11-04T16:32:00-07:00", "service": "notification-service", "level": "INFO", "message": "push sent: walk_ended", "trace_id": "tr_7fb230a", "walk_gid": "wlk_7fb230", "provider_status": 200}
