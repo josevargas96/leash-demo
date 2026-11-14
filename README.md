@@ -2,6 +2,8 @@
 
 A fake dog-walking company, built so you can show how a real investigation turns into a skill. Every name, ID and number here is made up.
 
+The story: Leash shipped release 4.12 on Monday Nov 2. It's Wednesday, and support is sending the PM tickets. For each one the PM needs to know fast: is it the release, is it working as intended, or is it something nobody designed for?
+
 ## What's in here
 
 | Folder | Pretends to be |
@@ -11,7 +13,7 @@ A fake dog-walking company, built so you can show how a real investigation turns
 | sessions/ | A GPS session-replay tool, keyed by walk_gid. |
 | logs/ | Service logs with trace IDs, like an observability tool. |
 | src/ | The code behind walk completion and push notifications. |
-| docs/ | Product notes: how things are supposed to work. |
+| docs/ | Product notes (how things are supposed to work) and release notes (what shipped Monday). |
 | backup/ | A finished copy of the skill, in case the live build stalls. |
 
 ## The ID chain (the part people don't know)
@@ -21,11 +23,11 @@ You can't jump straight to the session by name. That's the knowledge you teach t
 
 ## The three tickets
 
-| Ticket | Sounds like | Actually |
-| --- | --- | --- |
-| 1 | Walker no-show | Walk happened. Push notifications failed (retries are off), so the owner never heard about it. Our bug. |
-| 2 | Charged for a cancelled walk | Lightning auto-cancel, refund already issued, takes 3 to 5 days. Working as intended. |
-| 3 | App wrongly marked walk incomplete | GPS dropped for 26 minutes, so distance read 0.3 mi and the 0.5 mi rule refunded the owner and skipped the walker's pay. Edge case: what do we want to do? |
+| Ticket | Sounds like | Actually | The release? |
+| --- | --- | --- | --- |
+| 1 | Walker no-show | Walk happened. Push notifications failed (retries are off), so the owner never heard about it. Our bug. | Yes: the new push provider, with retries off |
+| 2 | Charged for a cancelled walk | Lightning auto-cancel, refund already issued, takes 3 to 5 days. Working as intended. | No: lightning auto-cancel shipped in 4.11 |
+| 3 | App wrongly marked walk incomplete | GPS dropped for 26 minutes, so distance read 0.3 mi and the 0.5 mi rule refunded the owner and skipped the walker's pay. Edge case: what do we want to do? | Yes: the new distance rule didn't plan for GPS gaps |
 
 ## Demo flow
 
@@ -38,9 +40,9 @@ You can't jump straight to the session by name. That's the knowledge you teach t
     - "Replay that walk in sessions/gps-sessions.json. What actually happened?"
     - "Search logs/service-logs.jsonl for that walk_gid and follow the trace_id across services."
     - "Something failed. Open the code in src/ and tell me what it expects."
-    - "Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case. Quote the evidence."
+    - "Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case. Then check docs/release-notes.md: is this from Monday's release? Quote the evidence."
 3. **Ticket 2, on its own.** "Now do ticket 2 the same way, by yourself."
-4. **Make the skill.** "Turn what we just did into a skill called leash-ticket-triage: the steps, the verdicts, the output format, and an empty case library."
+4. **Make the skill.** "Turn what we just did into a skill called leash-ticket-triage: the steps, the verdicts, the release check, the output format, and an empty case library."
 5. **Ticket 3, fresh session.** Run /clear, then "triage ticket 3." It should land on the edge case and ask what we want to do.
 6. **Add a guardrail** if it slips anywhere (for example, calling ticket 2 a bug): "Add a rule: check docs/product-notes.md before calling anything a bug. Add this ticket to the case library."
 

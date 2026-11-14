@@ -1,6 +1,6 @@
 """Sends push notifications to dog owners (walk started, photo ready, walk ended)."""
 
-# Retries turned off while we migrate push providers.
+# 4.12 (Nov 2): retries turned off while we migrate to the new push provider.
 MAX_RETRIES = 0
 TIMEOUT_SECONDS = 3
 

@@ -1,7 +1,7 @@
 """Decides whether a walk counts as completed when the walker taps End."""
 
 MIN_DURATION_MIN = 25
-MIN_DISTANCE_MI = 0.5
+MIN_DISTANCE_MI = 0.5  # new in 4.12 (Nov 2)
 
 
 def complete_walk(walk):

@@ -1,6 +1,6 @@
 ---
 name: leash-ticket-triage
-description: Triage a Leash support ticket that links to a customer in the CRM. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
+description: Triage a Leash support ticket that links to a customer in the CRM, and say whether it comes from the latest release. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
 ---
 
 # Leash ticket triage
@@ -15,6 +15,7 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 6. **Follow the logs** in logs/service-logs.jsonl: find lines for that walk_gid, then follow the trace_id across every service.
 7. **Check the code** in src/ for anything that failed or made a decision, and say what it expects.
 8. **Check the product notes** in docs/product-notes.md before calling anything a bug.
+9. **Check the release** in docs/release-notes.md: is this tied to a change in the latest release? Name the change, or say it isn't related.
 
 ## Verdict (pick exactly one)
 
@@ -26,7 +27,7 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 
 ## Output
 
-1. One-line verdict.
+1. One-line verdict, plus whether it's from the latest release (and which change).
 2. A short table: step, what you found, evidence (quote the record or log line).
 3. What to tell support, in two sentences they can paste.
 4. For a bug or edge case: what you would bring to engineering.
@@ -38,4 +39,4 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 
 ## Case library
 
-- Charged after a lightning cancel: working as intended. The refund is issued at cancel time and takes 3 to 5 business days.
+- Charged after a lightning cancel: working as intended, and not from 4.12 (auto-cancel shipped in 4.11). The refund is issued at cancel time and takes 3 to 5 business days.

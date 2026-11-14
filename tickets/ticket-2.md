@@ -2,6 +2,6 @@
 **From:** Support (Kim)
 **Sent:** Wed Nov 4, 2026, 9:40 AM
 
-Customer says they were charged for yesterday afternoon's walk even though it got cancelled halfway. Wants their money back.
+Customer says they were charged for yesterday afternoon's walk even though it got cancelled halfway. Wants their money back. Is this the new update too?
 
 https://crm.leash.example/customers/CUS-51077
