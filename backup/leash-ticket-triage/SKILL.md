@@ -1,6 +1,6 @@
 ---
 name: leash-ticket-triage
-description: Triage a Leash support ticket that links to a customer in the CRM, and say whether it comes from the latest release. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
+description: Triage a Leash support ticket that links to a customer in the CRM, say whether it comes from the latest release, draft a bug write-up when it's our bug, and report how the release is going. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
 ---
 
 # Leash ticket triage
@@ -16,6 +16,9 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 7. **Check the code** in src/ for anything that failed or made a decision, and say what it expects.
 8. **Check the product notes** in docs/product-notes.md before calling anything a bug.
 9. **Check the release** in docs/release-notes.md: is this tied to a change in the latest release? Name the change, or say it isn't related.
+10. **Size it** in analytics/walks-since-launch.csv: how many other walks look like this one since launch?
+11. **If it's our bug,** write it up for the developers with docs/bug-template.md and save it in bugs/. It's a draft. Never file it anywhere.
+12. **Release health:** from analytics/, compared with analytics/week-before-launch.json, give three numbers on how the release is going: alerts delivered, walks that didn't count (and why), and owner texts to walkers per walk.
 
 ## Verdict (pick exactly one)
 
@@ -30,12 +33,15 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 1. One-line verdict, plus whether it's from the latest release (and which change).
 2. A short table: step, what you found, evidence (quote the record or log line).
 3. What to tell support, in two sentences they can paste.
-4. For a bug or edge case: what you would bring to engineering.
+4. For a bug: the path to the bug write-up in bugs/. For an edge case: the product question, with how many walks it touches.
+5. Release health: three lines, numbers only, compared with the week before launch.
 
 ## Rules (added after mistakes)
 
 - Check the product notes before calling anything a bug. If the app did what it is designed to do, it is working as intended.
 - Quote the evidence for every claim. No evidence, no claim.
+- Never file a bug or message anyone. Draft only; the PM decides.
+- Count with a script, never by eye.
 
 ## Case library
 

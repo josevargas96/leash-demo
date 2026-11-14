@@ -15,10 +15,15 @@ It's Wednesday. Support is sending the PM tickets, and every one asks the same t
 | tickets/ | Support tickets. They only have a CRM link, never the customer's name in a usable form. |
 | services/ | Our microservices: customers, bookings, walks, walkers. Each is a JSON file. |
 | sessions/ | A GPS session-replay tool, keyed by walk_gid. |
-| logs/ | Service logs with trace IDs, like an observability tool. |
+| logs/ | Service logs with trace IDs, like an observability tool. Only the walks support asked about. |
+| analytics/ | Product analytics for every walk since launch, plus the week before, to see if the release is working. |
 | src/ | The code behind the 20-minute rule and the Walk Done alert. |
-| docs/ | Product notes (how things are supposed to work) and release notes (what shipped Monday). |
-| backup/ | A finished copy of the skill, in case the live build stalls. |
+| docs/ | Product notes, release notes, and the bug template. |
+| backup/ | A finished copy of the skill and an example bug write-up, in case the live build stalls. |
+
+## How the tickets get to Claude
+
+For the demo, each ticket is a file in tickets/ and you hand it over in the chat. In real life the same skill can read a support channel every morning and triage whatever came in overnight.
 
 ## The ID chain (the part people don't know)
 
@@ -33,22 +38,23 @@ You can't jump straight to the session by name. That's the knowledge you teach t
 | 2 | "I was charged for a walk the walker cut short because of a storm." | Lightning auto-cancel. The refund was issued on the spot and takes 3 to 5 days. Working as intended. | No: that's been live since October |
 | 3 | "The app said my walk didn't count, but my dog was walked. I even got a photo." | The walker's phone lost GPS for 26 of the 41 minutes, so the app only saw 15 minutes. Under 20, so no charge and no pay for the walker. Edge case: what do we want to do? | Yes: the new 20-minute rule never planned for lost signal |
 
-## Demo flow
+## What you say to Claude
 
-1. Open Claude Code in this folder. Make sure there is no .claude/skills folder yet.
-2. **Ticket 1, by hand.** Walk it one step at a time:
-    - "Here's a support ticket. Pull the customer ID out of the CRM link."
-    - "Look them up in services/customers.json and grab the account_gid. Heads up, everything after this is keyed by account_gid, not the name."
-    - "Find their bookings in services/bookings.json. The ticket says today, so pick the one that matches the sent date."
-    - "Get the walk_gid for that booking from services/walks.json."
-    - "Replay that walk in sessions/gps-sessions.json. What actually happened?"
-    - "Search logs/service-logs.jsonl for that walk_gid and follow the trace_id across services."
-    - "Something failed. Open the code in src/ and tell me what it expects."
-    - "Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case. Then check docs/release-notes.md: is this from Monday's release? Quote the evidence."
-3. **Ticket 2, on its own.** "Now do ticket 2 the same way, by yourself."
-4. **Make the skill.** "Turn what we just did into a skill called leash-ticket-triage: the steps, the verdicts, the release check, the output format, and an empty case library."
-5. **Ticket 3, fresh session.** Run /clear, then "triage ticket 3." It should land on the edge case and ask what we want to do.
-6. **Add a guardrail** if it slips anywhere (for example, blaming the 20-minute rule for ticket 2): "Add a rule: check docs/product-notes.md and the release notes before calling anything a bug. Add this ticket to the case library."
+Talk to it like you're training a new hire: one step at a time, say the part only you know, and say what a good answer looks like.
+
+1. **Ticket 1, by hand.** One step at a time:
+    - "Here's a ticket from support: tickets/ticket-1.md. Pull the customer ID from the CRM link and look them up in services/customers.json. Heads up: everything after this is keyed by account_gid, not the name."
+    - "Find their booking for today in services/bookings.json, then its walk_gid in services/walks.json."
+    - "Replay that walk in sessions/gps-sessions.json, then follow its trace_id through logs/service-logs.jsonl. What actually happened?"
+    - "Open the code in src/ for whatever failed. Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case. And is it from Monday's release? Check docs/release-notes.md. Quote the evidence."
+    - "It's our bug, so write it up for the developers with docs/bug-template.md and save it in bugs/. Use analytics/ to say how many other walks this hit."
+    - "Before we move on: how's the release going overall? Check analytics/ against the week before launch. Give me three numbers."
+2. **Ticket 2, on its own.** "Now do tickets/ticket-2.md the same way, by yourself."
+3. **Make the skill.** "That's twice. Turn what we just did into a skill called leash-ticket-triage: the ID chain, the verdicts, the release check, a bug write-up when it's our bug, three release-health numbers every time, and an empty case library."
+4. **Ticket 3, fresh session.** Run /clear, then "Triage tickets/ticket-3.md." It should land on the edge case, size it, and ask what we want to do.
+5. **Add a rule when it slips** (for example, blaming the 20-minute rule for ticket 2): "That was a lightning cancel, not the new rule. Add a rule: check the product notes and release notes before blaming the release. Add this ticket to the case library."
+
+Before the demo, open Claude Code in this folder and make sure there is no .claude/skills folder or bugs/ folder yet.
 
 ## If something goes wrong
 
@@ -61,5 +67,7 @@ mkdir -p .claude/skills && cp -r backup/leash-ticket-triage .claude/skills/
 To reset before a rehearsal or the real thing:
 
 ```
-rm -rf .claude/skills
+rm -rf .claude/skills bugs
 ```
+
+If the bug write-up stalls, show backup/BUG-walk-done-alert-no-retry.md instead.
