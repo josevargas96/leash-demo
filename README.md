@@ -50,8 +50,8 @@ Talk to it like you're training a new hire: one step at a time, say the part onl
     - "It's our bug, so write it up for the developers with docs/bug-template.md and save it in bugs/. Use analytics/ to say how many other walks this hit."
     - "Before we move on: how's the release going overall? Check analytics/ against the week before launch. Give me three numbers."
 2. **Ticket 2, on its own.** "Now do tickets/ticket-2.md the same way, by yourself."
-3. **Make the skill.** "That's twice. Turn what we just did into a skill called leash-ticket-triage: the ID chain, the verdicts, the release check, a bug write-up when it's our bug, three release-health numbers every time, and an empty case library."
-4. **Ticket 3, fresh session.** Run /clear, then "Triage tickets/ticket-3.md." It should land on the edge case, size it, and ask what we want to do.
+3. **Make the skill.** "That's twice. Turn what we just did into a skill called leash-ticket-triage: the ID chain, the verdicts, the release check, a bug write-up when it's our bug, three release-health numbers every time, one user-behavior pattern worth knowing, and an empty case library."
+4. **Ticket 3, fresh session.** Run /clear, then "Triage tickets/ticket-3.md." It should land on the edge case, size it, ask what we want to do, and point out a pattern in how owners use the app mid-walk. You make the call out loud.
 5. **Add a rule when it slips** (for example, blaming the 20-minute rule for ticket 2): "That was a lightning cancel, not the new rule. Add a rule: check the product notes and release notes before blaming the release. Add this ticket to the case library."
 
 Before the demo, open Claude Code in this folder and make sure there is no .claude/skills folder or bugs/ folder yet.

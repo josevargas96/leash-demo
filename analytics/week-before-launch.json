@@ -4,5 +4,8 @@
   "owner_texts_to_walker_during_walk": 1615,
   "texts_per_walk": 0.62,
   "where_is_my_dog_tickets": 29,
+  "app_opens_during_walk": 5521,
+  "app_opens_per_walk": 2.12,
+  "app_opens_first_10_min": 2981,
   "note": "No Walk Done alerts existed yet. Every walk counted, whatever its length."
 }

@@ -1,6 +1,6 @@
 ---
 name: leash-ticket-triage
-description: Triage a Leash support ticket that links to a customer in the CRM, say whether it comes from the latest release, draft a bug write-up when it's our bug, and report how the release is going. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
+description: Triage a Leash support ticket that links to a customer in the CRM, say whether it comes from the latest release, draft a bug write-up when it's our bug, report how the release is going, and point out one user-behavior pattern worth knowing. Use when given a Leash ticket or a crm.leash.example customer link and asked what happened.
 ---
 
 # Leash ticket triage
@@ -19,6 +19,7 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 10. **Size it** in analytics/walks-since-launch.csv: how many other walks look like this one since launch?
 11. **If it's our bug,** write it up for the developers with docs/bug-template.md and save it in bugs/. It's a draft. Never file it anywhere.
 12. **Release health:** from analytics/, compared with analytics/week-before-launch.json, give three numbers on how the release is going: alerts delivered, walks that didn't count (and why), and owner texts to walkers per walk.
+13. **One pattern worth knowing:** look through analytics/ for one thing users are doing that isn't a bug but the PM should know about. Give the numbers and what it might mean. Don't say what to build; the PM decides.
 
 ## Verdict (pick exactly one)
 
@@ -35,6 +36,7 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 3. What to tell support, in two sentences they can paste.
 4. For a bug: the path to the bug write-up in bugs/. For an edge case: the product question, with how many walks it touches.
 5. Release health: three lines, numbers only, compared with the week before launch.
+6. One pattern worth knowing: two sentences, with numbers. An observation, not a recommendation.
 
 ## Rules (added after mistakes)
 
