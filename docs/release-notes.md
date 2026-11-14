@@ -1,11 +1,13 @@
 # Leash release notes
 
-## 4.12, shipped Monday Nov 2, 2026, 10:00 AM
+## 4.12, shipped Monday Nov 2, 2026, 10:00 AM: Walk Done alerts
 
-1. **New push provider.** Owner notifications (walk started, photo ready, walk ended) moved to a new push provider. Retries are switched off until the migration is finished.
-2. **Stricter completed-walk rule.** A walk now has to cover at least 0.5 miles, as well as last 25 minutes, to count as completed. This stops us charging owners and paying walkers for walks that never left the driveway.
-3. **Tips on the walk summary.** Owners can tip from the walk summary screen.
+**What it is:** when the walker brings your dog home, you get a ping with a photo and how long the walk was.
+
+**Why:** owners at work kept texting walkers "is she back yet?", and walkers were answering texts instead of walking.
+
+**The fine print:** a walk has to last at least 20 minutes to count. If it does, you're charged and you get the alert. If it doesn't, you're not charged, the walker isn't paid, and you get an alert saying it didn't count. Retries on the alert are off for launch week.
 
 ## 4.11, shipped Mon Oct 19, 2026
 
-1. Lightning auto-cancel now refunds the owner automatically.
+- Lightning auto-cancel: walks stop when there's lightning nearby, and the owner is refunded automatically. Refunds take 3 to 5 business days.

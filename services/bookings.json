@@ -63,7 +63,7 @@
       "scheduled_start": "2026-11-04T09:00:00-07:00",
       "duration_min": 30,
       "price_usd": 25.0,
-      "status": "refunded"
+      "status": "not_charged"
     },
     {
       "booking_gid": "bkg_3e91d7",

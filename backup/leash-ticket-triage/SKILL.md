@@ -39,4 +39,4 @@ Follow these steps in order. Do not skip a step, and do not guess an ID.
 
 ## Case library
 
-- Charged after a lightning cancel: working as intended, and not from 4.12 (auto-cancel shipped in 4.11). The refund is issued at cancel time and takes 3 to 5 business days.
+- Charged after a storm cut the walk short: lightning auto-cancel, refund already issued, 3 to 5 business days. Working as intended, and not from 4.12 (shipped in 4.11).

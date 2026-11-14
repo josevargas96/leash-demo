@@ -1,26 +1,31 @@
-"""Decides whether a walk counts as completed when the walker taps End."""
+"""Decides whether a walk counts when the walker taps End."""
 
-MIN_DURATION_MIN = 25
-MIN_DISTANCE_MI = 0.5  # new in 4.12 (Nov 2)
+# New in 4.12 (Mon Nov 2): a walk has to last at least 20 minutes to count.
+# Before 4.12, every walk counted.
+MIN_TRACKED_MIN = 20
 
 
 def complete_walk(walk):
-    """walk has duration_min, distance_mi and gps_gap_minutes.
+    """walk has tracked_min (minutes with GPS signal), duration_min and gps_gap_min.
 
-    A walk is completed only if it was long enough AND covered enough distance.
-    Otherwise the owner is refunded and the walker is not paid.
+    If it counts: charge the owner, pay the walker, send the Walk Done alert.
+    If not: no charge, no walker pay, tell the owner it didn't count.
     """
-    if walk["duration_min"] < MIN_DURATION_MIN or walk["distance_mi"] < MIN_DISTANCE_MI:
-        refund_owner(walk)
+    if walk["tracked_min"] < MIN_TRACKED_MIN:
+        skip_charge(walk)
         skip_walker_payout(walk)
-        return "incomplete"
+        send_not_counted_alert(walk)
+        return "not_counted"
 
     charge_owner(walk)
     pay_walker(walk)
-    return "completed"
+    send_walk_done_alert(walk)
+    return "counted"
 
 
-def refund_owner(walk): ...
+def skip_charge(walk): ...
 def skip_walker_payout(walk): ...
+def send_not_counted_alert(walk): ...
 def charge_owner(walk): ...
 def pay_walker(walk): ...
+def send_walk_done_alert(walk): ...
