@@ -47,8 +47,7 @@ Talk to it like you're training a new hire: one step at a time, say the part onl
     - "Find their booking for today in services/bookings.json, then its walk_gid in services/walks.json."
     - "Replay that walk in sessions/gps-sessions.json, then follow its trace_id through logs/service-logs.jsonl. What actually happened?"
     - "Open the code in src/ for whatever failed. Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case. And is it from Monday's release? Check docs/release-notes.md. Quote the evidence."
-    - "It's our bug, so write it up for the developers with docs/bug-template.md and save it in bugs/. Use analytics/ to say how many other walks this hit."
-    - "Before we move on: how's the release going overall? Check analytics/ against the week before launch. Give me three numbers."
+    - "It's our bug, so write it up for the developers with docs/bug-template.md and save it in bugs/. Use analytics/ to say how many other walks this hit. Then tell me how the release is going overall: check analytics/ against the week before launch and give me three numbers."
 2. **Ticket 2, on its own.** "Now do tickets/ticket-2.md the same way, by yourself."
 3. **Make the skill.** "That's twice. Turn what we just did into a skill called leash-ticket-triage: the ID chain, the verdicts, the release check, a bug write-up when it's our bug, three release-health numbers every time, one user-behavior pattern worth knowing, and an empty case library."
 4. **Ticket 3, fresh session.** Run /clear, then "Triage tickets/ticket-3.md." It should land on the edge case, size it, ask what we want to do, and point out a pattern in how owners use the app mid-walk. You make the call out loud.
