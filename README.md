@@ -38,6 +38,22 @@ You can't jump straight to the session by name. That's the knowledge you teach t
 | 2 | "I was charged for a walk the walker cut short because of a storm." | Lightning auto-cancel. The refund was issued on the spot and takes 3 to 5 days. Working as intended. | No: that's been live since October |
 | 3 | "The app said my walk didn't count, but my dog was walked. I even got a photo." | The walker's phone lost GPS for 26 of the 41 minutes, so the app only saw 15 minutes. Under 20, so no charge and no pay for the walker. Edge case: what do we want to do? | Yes: the new 20-minute rule never planned for lost signal |
 
+## The short run (three prompts, for a timed talk)
+
+Each prompt takes Claude a minute or two, so the talk uses three:
+
+1. **Ticket 1, in one prompt.** "Here's a ticket from support: tickets/ticket-1.md. Triage it end to end. Heads up: you can't find the walk by name. Go from the customer in services/customers.json (use the CRM link) to their booking in services/bookings.json to the walk in services/walks.json. Replay the walk in sessions/gps-sessions.json, follow its trace_id through logs/service-logs.jsonl, then read the code in src/. Give me a verdict: bad data, user behavior, our bug, working as intended, or edge case, and say whether it's from Monday's release (docs/release-notes.md). Quote the evidence. If it's our bug, write it up with docs/bug-template.md and save it in bugs/. End with three release-health numbers from analytics/ against the week before launch."
+2. **Make the skill.** "Turn what you just did into a skill called leash-ticket-triage: the ID chain, the verdicts, the release check, a bug write-up when it's our bug, three release-health numbers every time, one user-behavior pattern worth knowing, and an empty case library."
+3. **Ticket 3, fresh session.** Run /clear, then "Triage tickets/ticket-3.md."
+
+If a step runs long, skip ahead with the finished skill:
+
+```
+mkdir -p .claude/skills && cp -r backup/leash-ticket-triage .claude/skills/
+```
+
+Then open backup/leash-ticket-triage/SKILL.md to show it, or run /clear and go straight to ticket 3.
+
 ## What you say to Claude
 
 Talk to it like you're training a new hire: one step at a time, say the part only you know, and say what a good answer looks like.
@@ -63,10 +79,10 @@ Copy the backup skill into place and keep going:
 mkdir -p .claude/skills && cp -r backup/leash-ticket-triage .claude/skills/
 ```
 
-To reset before a rehearsal or the real thing:
+To reset before a rehearsal or the real thing (this throws away every local change and new file in this folder):
 
 ```
-rm -rf .claude/skills bugs
+git fetch origin && git reset --hard origin/main && git clean -fdx
 ```
 
 If the bug write-up stalls, show backup/BUG-walk-done-alert-no-retry.md instead.
